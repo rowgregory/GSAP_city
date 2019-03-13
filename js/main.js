@@ -3,6 +3,14 @@ console.log('pinged');
 (function($) {
     'use strict';
 
+    $.ajax({
+        url: "images/city.svg",
+        dataType: 'html',
+        type: 'GET',
+        success: function(data) {       
+            console.log(data);  
+            $('.container').prepend(data)
+
     // declare actors here
 
     let $bg_x5F_buildings = $('#bg_x5F_buildings'),
@@ -106,6 +114,8 @@ console.log('pinged');
     }
 
     go();
+}
+})
 
 
 })(jQuery);
